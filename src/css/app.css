@@ -1,0 +1,181 @@
+:root {
+--LimeGreen: hsl(163, 72%, 41%);
+--BrightRed: hsl(356, 69%, 56%);
+
+--Facebook: hsl(208, 92%, 53%);
+--Twitter: hsl(203, 89%, 53%);
+--Instagram: linear-gradient (hsl(37, 97%, 70%)0%, hsl(329, 70%, 58%)60%);
+--YouTube: hsl(348, 97%, 39%);
+--bg-hero: hsl(225, 100%, 98%);
+--bg-pg:hsl(0, 0%, 100%);
+--bg-cd: hsl(227, 47%, 96%);
+--grey:hsl(228, 12%, 44%);
+--black:hsl(230, 17%, 14%);
+--bg-toggle:hsl(230, 22%, 74%);
+--toggle-margin:2px;
+--cd-hover:hsl(227, 47%, 92%);
+}
+[data-theme="dark"] {
+--bg-hero: hsl(232, 19%, 15%);
+--bg-pg:hsl(230, 17%, 14%);
+--bg-cd: hsl(228, 28%, 20%);
+--grey: hsl(228, 34%, 66%);
+--black:hsl(0, 0%, 100%);
+--bg-toggle:linear-gradient(to right top, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+--toggle-margin:-17px;
+--cd-hover: hsl(228, 28%, 25%);
+}
+* {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        
+    }
+body {
+  overflow-x:hidden;  
+}
+.app {
+  font-family:Inter;  
+  align-items:center;
+  display:flex;
+  flex-direction:column;
+  background-color:var(--bg-pg);
+  padding-bottom:50px;
+}
+.hero {
+  width:100%;
+  background-color:var(--bg-hero);
+  justify-content:center;
+  display:flex;
+  padding: 20px 0 141.5px 0;
+}
+.toggle {
+  height:20px;
+  width:40px;
+  border-radius:50px;
+  background:var(--bg-toggle);
+}
+.toggle:before {
+  content:'';
+  height:15px;
+  width:15px;
+  border-radius:50%;
+  background-color:var(--bg-pg);
+  position:absolute;
+  justify-content:center;
+  margin-top:-7.5px;
+  margin-left:var(--toggle-margin);
+}
+/*card styles*/
+.topbar {
+  padding-top:4px;
+  border-radius:10px 10px 0 0;
+}
+.card1 {
+  padding: 20px 50px;
+  border-radius:0 0 5px 5px;
+}
+.card2 {padding: 20px; border-radius:5px}
+.card1:hover, .card2:hover {background-color:var(--cd-hover)}
+.bg-cd {
+  background-color:var(--bg-cd);
+}
+.bg.dark {
+  background-color:#f5f5f5;
+  color:#ff0000;
+}
+.followers {
+  text-transform: uppercase;
+  text-align:center;
+  font-size:13px;
+  font-weight:200;
+  letter-spacing: 4px;
+  margin:0;
+}
+.change {
+  font-weight:700;
+  font-size:12px;
+}
+/*fonts*/
+.wt700{font-weight:700}
+.bigNum {font-size:50px; font-weight:700;}
+.num {font-size:30px; font-weight:600;}
+.username {font-size:10px; font-weight:600}
+.param {font-size:14px;}
+.f20{font-size:20px;} .f30{font-size:30px;} 
+
+/*margins and paddings*/
+.m0{margin:0} .m-b0{margin-bottom:0} 
+.m-t-50{margin-top:-151px;}
+.p-t10{padding-top:10px}
+
+/*colors*/
+.green{color:var(--LimeGreen)} .red{color:var(--BrightRed)}
+.tx-grey{color:var(--grey)} .tx-black{color:var(--black)}
+.bg-fb {background-color: var(--Facebook)}
+.bg-tw {background-color: var(--Twitter)}
+.bg-ig {background-image: linear-gradient(to right top, hsl(37, 97%, 70%), hsl(329, 70%, 58%));}
+.bg-yt {background-color: var(--YouTube)}
+
+/*Flex and columns*/
+.flex, .mflex, .columns {
+  display:flex;
+  flex-direction:row;
+}
+.vflex {
+  display:flex;
+  flex-direction:column;
+}
+.edges {justify-content: space-between;}
+.columns50{width: 50%;} .columns3{width:33.3%;} .columns60{width:60%} .columns70{width:70%} .columns30{width:30%} .columns40{width:40%} 
+.columns25{width:25%} .columns100{width:100%}
+.box{width:1200px}
+
+/*grid gaps*/
+.grid5{grid-gap:5px} .grid10{grid-gap:10px} .grid20{grid-gap:20px} .grid50{grid-gap:50px} .grid30{grid-gap:30px}
+
+/*Spacers*/
+.spacer50 {padding-top:50px} .spacer20 {padding-top:20px} .spacer30 {padding-top:30px} .spacer100 {padding-top:100px}
+
+/*alignment*/
+.center {text-align:center} .right {text-align:right} .left {text-align:left}
+.flcenter {justify-content:center} .vcenter{align-items:center;}
+
+
+@media screen and (max-width:1200px) {
+.app {
+  grid-gap:50px;
+}
+.box {padding:0 20px;}
+.app-title {
+  border-bottom: 1px solid var(--black);
+  padding-bottom:20px;
+}
+/*margins and paddings*/
+.m-t-50{margin-top:50px;}
+.p-t10{padding-top:10px}
+
+/*grid gaps*/
+.grid5{grid-gap:5px} .grid10{grid-gap:10px} .grid20{grid-gap:20px} .grid50{grid-gap:20px} .grid30{grid-gap:20px}
+
+/*Flex and columns*/
+.flex, .columns {
+  display:flex;
+  flex-direction:column;
+}
+.m-edges {justify-content:space-between; display:flex;}
+.columns50, .columns3, .columns60,.columns70, .columns30, .columns40, .columns25, .columns100{width:100%}
+.box{width:92vw}
+/*fonts*/
+.wt700{font-weight:700}
+.username {font-size:10px; font-weight:600}
+.param {font-size:14px;}
+.f20{font-size:15px;} .f30{font-size:20px;} 
+
+/*margins and paddings*/
+.m0{margin:0} .m-b0{margin-bottom:0} 
+.m-t-50{margin-top:-151px;}
+.p-t10{padding-top:10px}
+
+
+}
